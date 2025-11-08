@@ -10,7 +10,6 @@ const ScrollToTop = () => {
       top: 0,
       behavior: "smooth",
     });
-
     prevPathRef.current = pathname;
   }, [pathname, key]);
 
