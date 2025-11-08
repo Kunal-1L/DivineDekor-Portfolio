@@ -1,11 +1,22 @@
 import { FaPhoneAlt, FaWhatsapp, FaInstagram } from "react-icons/fa";
 import "./Home.css";
 import { useNavigate } from "react-router-dom";
+const VITE_ADMIN_SECRET_KEY = import.meta.env.VITE_ADMIN_SECRET_KEY;
+
 const Footer = () => {
   const navigate = useNavigate();
 
-   const handleLinkClick = (feature) => {
+  const handleLinkClick = (feature) => {
     navigate(feature);
+  };
+  const handleAdminClick = () => {
+    const key = prompt("Enter admin secret key:");
+    if (key === VITE_ADMIN_SECRET_KEY) {
+      localStorage.setItem("isAdmin", "true");
+      navigate("/");
+    } else {
+      alert("❌ Wrong key!");
+    }
   };
   return (
     <div className="footer">
@@ -25,13 +36,20 @@ const Footer = () => {
           <h3>Quick Links</h3>
           <ul>
             <li>
-              <button onClick={()=>handleLinkClick("/#categories")}>Categories</button>
+              <button onClick={() => handleLinkClick("/#categories")}>
+                Categories
+              </button>
             </li>
             <li>
-              <button onClick={()=>handleLinkClick("/#reviews")}>Reviews</button>
+              <button onClick={() => handleLinkClick("/#reviews")}>
+                Reviews
+              </button>
             </li>
             <li>
-              <button onClick={()=> handleLinkClick("/#faqs")}>FAQs</button>
+              <button onClick={() => handleLinkClick("/#faqs")}>FAQs</button>
+            </li>
+            <li>
+              <button onClick={() => handleAdminClick()}>Admin</button>
             </li>
           </ul>
         </div>

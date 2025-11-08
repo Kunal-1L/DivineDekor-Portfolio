@@ -11,11 +11,18 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import { useLocation, useNavigate } from "react-router-dom";
+import ImageUpload from "./ImageUpload";
 const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 const Home = () => {
   const [openFaq, setOpenFaq] = useState(null);
   const [reviews, setReviews] = useState([]);
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [showUpload, setShowUpload] = useState(false);
+
+  const handleUploadImageClick = () => {
+    setShowUpload(!showUpload);
+  };
   const toggleFaq = (index) => {
     setOpenFaq(openFaq === index ? null : index);
   };
@@ -24,6 +31,8 @@ const Home = () => {
 
   useEffect(() => {
     document.title = "DivineDekor - Home";
+    const flag = localStorage.getItem("isAdmin");
+    setIsAdmin(flag === "true");
   }, []);
 
   // fetch reviews with error handling
@@ -135,7 +144,6 @@ const Home = () => {
     <>
       {/* Header */}
       <Header />
-
       {/* Hero Banner */}
       <div id="banner" className="banner">
         <div className="banner-content">
@@ -147,7 +155,12 @@ const Home = () => {
           </p>
 
           <div className="banner-cta-row">
-            <button className="banner-button" onClick={() => navigate('/gallery')}>See Portfolio</button>
+            <button
+              className="banner-button"
+              onClick={() => navigate("/gallery")}
+            >
+              See Portfolio
+            </button>
             <a className="banner-ghost" href="#contact">
               Contact Now
             </a>
@@ -158,6 +171,16 @@ const Home = () => {
             <li>Custom designs</li>
           </ul>
         </div>
+        {isAdmin && (
+          <button
+            className="banner-button"
+            style={{ marginTop: 32 }}
+            onClick={() => handleUploadImageClick()}
+          >
+            {showUpload ? " Cancel Upload" : "Upload Image"}
+          </button>
+        )}
+        {showUpload && <ImageUpload />}
       </div>
 
       {/* Categories */}
@@ -257,10 +280,7 @@ const Home = () => {
           <Link to="/gallery?type=cake corner" className="category-link">
             <div className="category-card">
               <div>
-                <img
-                  src="categories/Cake.jpeg"
-                  alt="Cakes and Pastries"
-                />
+                <img src="categories/Cake.jpeg" alt="Cakes and Pastries" />
               </div>
               <div className="category-name">Cake Corner</div>
             </div>
@@ -281,28 +301,16 @@ const Home = () => {
             </div>
             <div className="event-gallery">
               <div className="event-image">
-                <img
-                  src="gallery/Birthday/Birthday1.jpg"
-                  alt="Birthday 1"
-                />
+                <img src="gallery/Birthday/Birthday1.jpg" alt="Birthday 1" />
               </div>
               <div className="event-image">
-                <img
-                  src="gallery/Birthday/Birthday2.jpg"
-                  alt="Birthday 2"
-                />
+                <img src="gallery/Birthday/Birthday2.jpg" alt="Birthday 2" />
               </div>
               <div className="event-image">
-                <img
-                  src="gallery/Birthday/Birthday3.jpg"
-                  alt="Birthday 3"
-                />
+                <img src="gallery/Birthday/Birthday3.jpg" alt="Birthday 3" />
               </div>
               <div className="event-image">
-                <img
-                  src="gallery/Birthday/Birthday4.jpg"
-                  alt="Birthday 4"
-                />
+                <img src="gallery/Birthday/Birthday4.jpg" alt="Birthday 4" />
               </div>
             </div>
             <Link to="/gallery?type=birthday decor" className="view-all-button">
@@ -319,28 +327,16 @@ const Home = () => {
             </div>
             <div className="event-gallery">
               <div className="event-image">
-                <img
-                  src="gallery/Wedding/Wedding1.jpg"
-                  alt="Wedding 1"
-                />
+                <img src="gallery/Wedding/Wedding1.jpg" alt="Wedding 1" />
               </div>
               <div className="event-image">
-                <img
-                  src="gallery/Wedding/Wedding2.jpg"
-                  alt="Wedding 2"
-                />
+                <img src="gallery/Wedding/Wedding2.jpg" alt="Wedding 2" />
               </div>
               <div className="event-image">
-                <img
-                  src="gallery/Wedding/Wedding3.jpg"
-                  alt="Wedding 3"
-                />
+                <img src="gallery/Wedding/Wedding3.jpg" alt="Wedding 3" />
               </div>
               <div className="event-image">
-                <img
-                  src="gallery/Wedding/Wedding4.jpg"
-                  alt="Wedding 4"
-                />
+                <img src="gallery/Wedding/Wedding4.jpg" alt="Wedding 4" />
               </div>
             </div>
             <Link to="/gallery?type=wedding decor" className="category-link">
