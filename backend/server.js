@@ -4,14 +4,16 @@ import { promises as fs } from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import mongoose from "mongoose";
+import dotenv from "dotenv";
 
-// Connect to MongoDB
+dotenv.config(); 
+
 mongoose
   .connect(process.env.DB_URI)
   .then(() => console.log("✅ Connected to MongoDB"))
   .catch((err) => {
     console.error("❌ MongoDB Connection Error:", err);
-    process.exit(1); // Exit if MongoDB connection fails
+    process.exit(1);
   });
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));

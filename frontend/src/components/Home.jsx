@@ -1,4 +1,4 @@
-import "./home.css";
+import "./Home.css";
 import { useEffect, useState } from "react";
 import {
   FaPhoneAlt,
@@ -168,7 +168,7 @@ const Home = () => {
             <div className="category-card">
               <div>
                 <img
-                  src="../../public/categories/Birthday Decorations.jpeg"
+                  src="categories/Birthday Decorations.jpeg"
                   alt="Birthday Party Decorations"
                 />
               </div>
@@ -183,7 +183,7 @@ const Home = () => {
             <div className="category-card">
               <div>
                 <img
-                  src="../../public/categories/Baby Shower.jpeg"
+                  src="categories/Baby Shower.jpeg"
                   alt="Baby Shower Decorations"
                 />
               </div>
@@ -195,7 +195,7 @@ const Home = () => {
             <div className="category-card">
               <div>
                 <img
-                  src="../../public/categories/Anniversary Decorations.jpeg"
+                  src="categories/Anniversary Decorations.jpeg"
                   alt="Anniversary Decorations"
                 />
               </div>
@@ -210,7 +210,7 @@ const Home = () => {
             <div className="category-card">
               <div>
                 <img
-                  src="../../public/categories/Haldi_mehndi.jpeg"
+                  src="categories/Haldi_mehndi.jpeg"
                   alt="Haldi and Mehndi Decorations"
                 />
               </div>
@@ -222,7 +222,7 @@ const Home = () => {
             <div className="category-card">
               <div>
                 <img
-                  src="../../public/categories/Gift Packing.jpeg"
+                  src="categories/Gift Packing.jpeg"
                   alt="Gift Wrapping and Packaging"
                 />
               </div>
@@ -234,7 +234,7 @@ const Home = () => {
             <div className="category-card">
               <div>
                 <img
-                  src="../../public/categories/Car Decoration.jpeg"
+                  src="categories/Car Decoration.jpeg"
                   alt="Car Flower Decorations"
                 />
               </div>
@@ -246,7 +246,7 @@ const Home = () => {
             <div className="category-card">
               <div>
                 <img
-                  src="../../public/categories/Wedding Pyro.jpeg"
+                  src="categories/Wedding Pyro.jpeg"
                   alt="Wedding Stage and Entry Decorations"
                 />
               </div>
@@ -258,7 +258,7 @@ const Home = () => {
             <div className="category-card">
               <div>
                 <img
-                  src="../../public/categories/Cake.jpeg"
+                  src="categories/Cake.jpeg"
                   alt="Cakes and Pastries"
                 />
               </div>
@@ -282,25 +282,25 @@ const Home = () => {
             <div className="event-gallery">
               <div className="event-image">
                 <img
-                  src="../../public/gallery/Birthday/Birthday1.jpg"
+                  src="gallery/Birthday/Birthday1.jpg"
                   alt="Birthday 1"
                 />
               </div>
               <div className="event-image">
                 <img
-                  src="../../public/gallery/Birthday/Birthday2.jpg"
+                  src="gallery/Birthday/Birthday2.jpg"
                   alt="Birthday 2"
                 />
               </div>
               <div className="event-image">
                 <img
-                  src="../../public/gallery/Birthday/Birthday3.jpg"
+                  src="gallery/Birthday/Birthday3.jpg"
                   alt="Birthday 3"
                 />
               </div>
               <div className="event-image">
                 <img
-                  src="../../public/gallery/Birthday/Birthday4.jpeg"
+                  src="gallery/Birthday/Birthday4.jpeg"
                   alt="Birthday 4"
                 />
               </div>
@@ -320,25 +320,25 @@ const Home = () => {
             <div className="event-gallery">
               <div className="event-image">
                 <img
-                  src="../../public/gallery/Wedding/Wedding1.jpg"
+                  src="gallery/Wedding/Wedding1.jpg"
                   alt="Wedding 1"
                 />
               </div>
               <div className="event-image">
                 <img
-                  src="../../public/gallery/Wedding/Wedding2.jpg"
+                  src="gallery/Wedding/Wedding2.jpg"
                   alt="Wedding 2"
                 />
               </div>
               <div className="event-image">
                 <img
-                  src="../../public/gallery/Wedding/Wedding3.jpg"
+                  src="gallery/Wedding/Wedding3.jpg"
                   alt="Wedding 3"
                 />
               </div>
               <div className="event-image">
                 <img
-                  src="../../public/gallery/Wedding/Wedding4.jpg"
+                  src="gallery/Wedding/Wedding4.jpg"
                   alt="Wedding 4"
                 />
               </div>
@@ -357,16 +357,16 @@ const Home = () => {
             </div>
             <div className="event-gallery">
               <div className="event-image">
-                <img src="../../public/gallery/Ring/Ring1.jpg" alt="Ring 1" />
+                <img src="gallery/Ring/Ring1.jpg" alt="Ring 1" />
               </div>
               <div className="event-image">
-                <img src="../../public/gallery/Ring/Ring2.jpg" alt="Ring 2" />
+                <img src="gallery/Ring/Ring2.jpg" alt="Ring 2" />
               </div>
               <div className="event-image">
-                <img src="../../public/gallery/Ring/Ring3.jpeg" alt="Ring 3" />
+                <img src="gallery/Ring/Ring3.jpeg" alt="Ring 3" />
               </div>
               <div className="event-image">
-                <img src="../../public/gallery/Ring/Ring4.jpeg" alt="Ring 4" />
+                <img src="gallery/Ring/Ring4.jpeg" alt="Ring 4" />
               </div>
             </div>
             <Link
@@ -386,16 +386,16 @@ const Home = () => {
             </div>
             <div className="event-gallery">
               <div className="event-image">
-                <img src="../../public/gallery/Gift/Gift1.jpg" alt="Gift 1" />
+                <img src="gallery/Gift/Gift1.jpg" alt="Gift 1" />
               </div>
               <div className="event-image">
-                <img src="../../public/gallery/Gift/Gift2.jpg" alt="Gift 2" />
+                <img src="gallery/Gift/Gift2.jpg" alt="Gift 2" />
               </div>
               <div className="event-image">
-                <img src="../../public/gallery/Gift/Gift3.jpg" alt="Gift 3" />
+                <img src="gallery/Gift/Gift3.jpg" alt="Gift 3" />
               </div>
               <div className="event-image">
-                <img src="../../public/gallery/Gift/Gift4.jpeg" alt="Gift 4" />
+                <img src="gallery/Gift/Gift4.jpeg" alt="Gift 4" />
               </div>
             </div>
             <Link to="/gallery?type=gift packing" className="view-all-button">
@@ -412,16 +412,16 @@ const Home = () => {
             </div>
             <div className="event-gallery">
               <div className="event-image">
-                <img src="../../public/gallery/Cake/Cake1.jpg" alt="Cake 1" />
+                <img src="gallery/Cake/Cake1.jpg" alt="Cake 1" />
               </div>
               <div className="event-image">
-                <img src="../../public/gallery/Cake/Cake2.jpg" alt="Cake 2" />
+                <img src="gallery/Cake/Cake2.jpg" alt="Cake 2" />
               </div>
               <div className="event-image">
-                <img src="../../public/gallery/Cake/Cake3.jpg" alt="Cake 3" />
+                <img src="gallery/Cake/Cake3.jpg" alt="Cake 3" />
               </div>
               <div className="event-image">
-                <img src="../../public/gallery/Cake/Cake4.jpg" alt="Cake 4" />
+                <img src="gallery/Cake/Cake4.jpg" alt="Cake 4" />
               </div>
             </div>
             <Link to="/gallery?type=cake corner" className="view-all-button">
