@@ -300,7 +300,7 @@ const Home = () => {
               </div>
               <div className="event-image">
                 <img
-                  src="gallery/Birthday/Birthday4.jpeg"
+                  src="gallery/Birthday/Birthday4.jpg"
                   alt="Birthday 4"
                 />
               </div>
@@ -366,7 +366,7 @@ const Home = () => {
                 <img src="gallery/Ring/Ring3.jpeg" alt="Ring 3" />
               </div>
               <div className="event-image">
-                <img src="gallery/Ring/Ring4.jpeg" alt="Ring 4" />
+                <img src="gallery/Ring/Ring4.jpg" alt="Ring 4" />
               </div>
             </div>
             <Link
@@ -395,7 +395,7 @@ const Home = () => {
                 <img src="gallery/Gift/Gift3.jpg" alt="Gift 3" />
               </div>
               <div className="event-image">
-                <img src="gallery/Gift/Gift4.jpeg" alt="Gift 4" />
+                <img src="gallery/Gift/Gift4.jpg" alt="Gift 4" />
               </div>
             </div>
             <Link to="/gallery?type=gift packing" className="view-all-button">
