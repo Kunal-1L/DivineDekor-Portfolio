@@ -1,4 +1,4 @@
-import "./home.css";
+import "./Home.css";
 import { useEffect, useState } from "react";
 import {
   FaPhoneAlt,
