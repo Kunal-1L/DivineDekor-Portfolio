@@ -40,6 +40,7 @@ body {
   margin: 0 0 0.5rem;
   color: #111827;
   font-weight: 700;
+  user-select: none;
 }
 .hero-sub {
   color: var(--muted);

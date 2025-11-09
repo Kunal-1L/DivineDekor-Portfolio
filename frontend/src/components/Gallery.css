@@ -18,6 +18,8 @@
   margin-top: 2rem;
   font-size: 2.5rem;
   color: var(--color-heading);
+    user-select: none;
+
 }
 
 /* grid & items (existing) */
@@ -416,7 +418,7 @@
   animation: fadeIn 0.3s ease;
 }
 
-/* Responsive Design */
+/* --- Responsive Design (Updated for two columns on mobile) --- */
 @media (max-width: 768px) {
   .gallery-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -429,35 +431,10 @@
   }
 }
 
-@media (max-width: 480px) {
-  .gallery-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 0.75rem;
-  }
-
-  .gallery-container {
-    padding: 1rem 0.5rem;
-    padding-top: 6rem;
-  }
-
-  .gallery-title {
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-  }
-}
-
-@media (max-width: 980px) {
-  .lightbox-content {
-    max-width: 720px;
-    padding: 12px;
-  }
-  .lightbox-image {
-    max-height: calc(100vh - 240px);
-  }
-}
 @media (max-width: 560px) {
   .gallery-grid {
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    /* Reduced to 160px min-width to help guarantee two columns */
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 0.75rem;
   }
   .lightbox-content {
@@ -473,5 +450,42 @@
     right: 8px;
     width: 36px;
     height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    /* Further reduction to 150px to ensure two columns on most phones */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .gallery-container {
+    padding: 1rem 0.5rem;
+    padding-top: 6rem;
+  }
+
+  .gallery-title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Added for very narrow screens (e.g., < 400px) */
+@media (max-width: 400px) {
+  .gallery-grid {
+    /* Safe minimum width for two items on the narrowest phones */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 980px) {
+  .lightbox-content {
+    max-width: 720px;
+    padding: 12px;
+  }
+  .lightbox-image {
+    max-height: calc(100vh - 240px);
   }
 }

@@ -1,5 +1,5 @@
 import "./Home.css";
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import {
   FaPhoneAlt,
   FaWhatsapp,
@@ -12,6 +12,7 @@ import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import { useLocation, useNavigate } from "react-router-dom";
 import ImageUpload from "./ImageUpload";
+import useScrollAnimation from "../hooks/useScrollAnimation";
 const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
   const [isAdmin, setIsAdmin] = useState(false);
   const [showUpload, setShowUpload] = useState(false);
 
+  useScrollAnimation();
   const handleUploadImageClick = () => {
     setShowUpload(!showUpload);
   };
@@ -185,7 +187,7 @@ const Home = () => {
 
       {/* Categories */}
       <div id="categories" className="categories">
-        <h2 className="categories-title">Explore Our Categories</h2>
+        <h2 className="categories-title fade-up">Explore Our Categories</h2>
         <div className="categories-list">
           <Link to="/gallery?type=birthday decor" className="category-link">
             <div className="category-card">
@@ -290,7 +292,7 @@ const Home = () => {
 
       {/* Events Section */}
       <div id="events" className="events">
-        <h2 className="events-title">Explore Our Events</h2>
+        <h2 className="events-title fade-up">Explore Our Events</h2>
         <div className="events-list">
           {/* Event 1: Birthday */}
           <div className="event">
@@ -429,7 +431,7 @@ const Home = () => {
 
       {/* Reviews */}
       <div id="reviews" className="reviews">
-        <h2 className="reviews-title">What Our Customers Say</h2>
+        <h2 className="reviews-title fade-up">What Our Customers Say</h2>
         <div className="reviews-slider">
           <div className="reviews-list">
             {reviews.map((review, index) => (
@@ -447,7 +449,7 @@ const Home = () => {
 
       {/* Feedback form (new) */}
       <div id="feedback" className="feedback">
-        <h2 className="feedback-title">Leave Feedback</h2>
+        <h2 className="feedback-title fade-up">Leave Feedback</h2>
         <form className="feedback-form" onSubmit={handleFeedbackSubmit}>
           <input
             type="text"
@@ -482,7 +484,7 @@ const Home = () => {
 
       {/* FAQs */}
       <div id="faqs" className="faqs">
-        <h2 className="faqs-title">Frequently Asked Questions</h2>
+        <h2 className="faqs-title fade-up">Frequently Asked Questions</h2>
         {faqs.map((faq, index) => (
           <div
             className={`faq-item ${openFaq === index ? "open" : ""}`}
@@ -499,7 +501,7 @@ const Home = () => {
 
       {/* Contact */}
       <div id="contact" className="contact">
-        <h2 className="contact-title">Get in Touch</h2>
+        <h2 className="contact-title fade-up">Get in Touch</h2>
         <p className="contact-subtitle">
           We'd love to hear from you! Reach out for inquiries or bookings.
         </p>
@@ -529,7 +531,7 @@ const Home = () => {
 
       {/* Location */}
       <div className="location">
-        <h2 className="location-title">Find Us Here</h2>
+        <h2 className="location-title fade-up">Find Us Here</h2>
         <div className="location-name">
           <FaMapMarkerAlt /> Tandon Decorators, Sambhal, Uttar Pradesh
         </div>{" "}

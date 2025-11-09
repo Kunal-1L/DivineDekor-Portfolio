@@ -71,6 +71,7 @@ h6 {
 
 .logo-name {
   margin-left: 0.5rem;
+  user-select: none;
 }
 
 .logo-title {
@@ -175,7 +176,6 @@ h6 {
     letter-spacing: 0.5px;
   }
 }
-
 
 .banner-subtitle {
   font-family: var(--font-sans);
@@ -309,6 +309,7 @@ h6 {
   color: var(--color-heading);
   text-align: center;
   margin-bottom: 2rem;
+  user-select: none;
 }
 
 .categories-list {
@@ -376,6 +377,7 @@ h6 {
   font-weight: 600;
   color: var(--color-heading);
   margin-bottom: 2rem;
+  user-select: none;
 }
 .reviews-slider {
   width: 100%;
@@ -447,6 +449,7 @@ h6 {
   font-weight: 600;
   color: var(--color-heading);
   margin-bottom: 2rem;
+  user-select: none;
 }
 
 .location-map {
@@ -508,6 +511,7 @@ h6 {
   color: var(--color-heading);
   margin-bottom: 1.5rem;
   text-align: center;
+  user-select: none;
 }
 .faq-item {
   margin-bottom: 1rem;
@@ -573,6 +577,7 @@ h6 {
   font-weight: 600;
   color: var(--color-heading);
   margin-bottom: 1rem;
+  user-select: none;
 }
 .contact-subtitle {
   font-family: var(--font-sans);
@@ -683,8 +688,7 @@ h6 {
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.3s ease;
-    cursor: pointer;
-
+  cursor: pointer;
 }
 .footer-links button:hover {
   color: var(--color-accent);
@@ -733,26 +737,6 @@ h6 {
   color: #ccc;
 }
 
-/* Sample Work and Events */
-.sample-work {
-  padding: 4rem 1rem;
-  background-color: var(--color-bg);
-  text-align: center;
-}
-.sample-work-title {
-  font-family: var(--font-heading);
-  font-size: 2rem;
-  font-weight: 600;
-  color: #2d3250;
-  margin-bottom: 1rem;
-}
-.sample-work-subtitle {
-  font-family: var(--font-sans);
-  font-size: 1rem;
-  color: var(--color-text);
-  margin-bottom: 2rem;
-}
-
 .events {
   padding: 4rem 0rem 2rem;
   text-align: center;
@@ -779,6 +763,7 @@ h6 {
   color: var(--color-heading);
   text-align: center;
   margin-bottom: 2rem;
+  user-select: none;
 }
 .event {
   margin-bottom: 1rem;
@@ -795,6 +780,7 @@ h6 {
   font-size: 1.5rem;
   font-weight: 600;
   color: #fff;
+  user-select: none;
 }
 .line {
   flex: 1;
@@ -859,6 +845,7 @@ h6 {
   font-size: 1.5rem;
   color: var(--color-heading);
   margin-bottom: 1rem;
+  user-select: none;
 }
 .feedback-form {
   display: grid;
@@ -1067,3 +1054,16 @@ h6 {
     margin-bottom: 1rem;
   }
 }
+
+/* ===== Fade-up animation ===== */
+.fade-up {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
