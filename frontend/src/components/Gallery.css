@@ -10,7 +10,6 @@
     rgba(255, 255, 255, 0.6)
   );
   backdrop-filter: blur(8px);
-  min-height: 100vh;
 }
 
 .gallery-title {
@@ -311,6 +310,7 @@
   display: flex;
   justify-content: center;
   padding: 2rem;
+  min-height:100vh;
 }
 
 .spinner {

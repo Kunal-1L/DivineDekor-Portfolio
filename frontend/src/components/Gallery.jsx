@@ -6,7 +6,7 @@ import Footer from "./Footer.jsx";
 import { FaWhatsapp, FaTimes, FaHeart, FaRegHeart } from "react-icons/fa";
 
 const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
-const WA_NUMBER = "919045328550";
+const WA_NUMBER = "919045328550"; 
 
 const Gallery = () => {
   const [searchParams] = useSearchParams();
@@ -33,8 +33,8 @@ const Gallery = () => {
   const observerFiltered = useRef();
 
   useEffect(() => {
-    document.title = "TandonDekor - Portfolio";
-  }, []);
+      document.title = "TandonDekor - Portfolio";
+    }, []);
 
   const handleLike = async (itemId) => {
     try {
@@ -268,7 +268,7 @@ const Gallery = () => {
               </div>
             ) : (
               !loadingFiltered && (
-                <p className="no-results">No {filterType} found</p>
+                <p className="no-results">No {filterType} decorations found</p>
               )
             )}
 
@@ -280,59 +280,56 @@ const Gallery = () => {
           </>
         )}
 
-        {allItems.length > 0 && (
-          <>
-            <h2 className="gallery-title">
-              {!filterType ? "Our Gallery" : "More Inspirations"}
-            </h2>
-            <div className="line"></div>
+        <h2 className="gallery-title">
+          {!filterType ? "Our Gallery" : 
+          "More Inspirations"}
+        </h2>
+        <div className="line"></div>
 
-            <div className="gallery-grid">
-              {allItems.map((item, index) => (
-                <div
-                  ref={index === allItems.length - 1 ? lastAllRef : null}
-                  className="gallery-item"
-                  key={item._id ?? index}
-                  onClick={() => openLightbox(item)}
-                  role="button"
-                  tabIndex={0}
-                  onKeyDown={(e) => e.key === "Enter" && openLightbox(item)}
-                >
-                  <div className="gallery-item-inner">
-                    <div className="imaHHHge-placeholder" />
-                    <img
-                      src={item.filePath}
-                      alt={`Gallery item ${index + 1}`}
-                      loading="lazy"
-                      onLoad={(e) => {
-                        e.target.style.opacity = 1;
-                        if (e.target.previousSibling)
-                          e.target.previousSibling.style.display = "none";
-                      }}
-                    />
-                    <div className="gallery-item-type">
-                      {item.fileType}
-                      <div
-                        className="like-section"
-                        onClick={(e) => {
-                          e.stopPropagation(); // stop from triggering parent click
-                          handleLike(item._id);
-                        }}
-                      >
-                        {item.likeCnt > 0 ? (
-                          <FaHeart className="heart filled" />
-                        ) : (
-                          <FaRegHeart className="heart empty" />
-                        )}
-                        <sub className="like-count">{item.likeCnt}</sub>
-                      </div>
-                    </div>
+        <div className="gallery-grid">
+          {allItems.map((item, index) => (
+            <div
+              ref={index === allItems.length - 1 ? lastAllRef : null}
+              className="gallery-item"
+              key={item._id ?? index}
+              onClick={() => openLightbox(item)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => e.key === "Enter" && openLightbox(item)}
+            >
+              <div className="gallery-item-inner">
+                <div className="image-placeholder" />
+                <img
+                  src={item.filePath}
+                  alt={`Gallery item ${index + 1}`}
+                  loading="lazy"
+                  onLoad={(e) => {
+                    e.target.style.opacity = 1;
+                    if (e.target.previousSibling)
+                      e.target.previousSibling.style.display = "none";
+                  }}
+                />
+                <div className="gallery-item-type">
+                  {item.fileType}
+                  <div
+                    className="like-section"
+                    onClick={(e) => {
+                      e.stopPropagation(); // stop from triggering parent click
+                      handleLike(item._id);
+                    }}
+                  >
+                    {item.likeCnt > 0 ? (
+                      <FaHeart className="heart filled" />
+                    ) : (
+                      <FaRegHeart className="heart empty" />
+                    )}
+                    <sub className="like-count">{item.likeCnt}</sub>
                   </div>
                 </div>
-              ))}
+              </div>
             </div>
-          </>
-        )}
+          ))}
+        </div>
 
         {loadingAll && (
           <div className="loading-spinner">
