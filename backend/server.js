@@ -44,7 +44,7 @@ const defaultReviews = [
     createdAt: new Date().toISOString(),
   },
   {
-    text: "Professional and creative team. Highly recommend DivineDekor!",
+    text: "Professional and creative team. Highly recommend TandonDekor!",
     author: "- Rahul K.",
     rating: 5,
     createdAt: new Date().toISOString(),

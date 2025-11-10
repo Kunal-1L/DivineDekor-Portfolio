@@ -32,7 +32,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = "DivineDekor - Home";
+    document.title = "TandonDekor - Home";
     const flag = localStorage.getItem("isAdmin");
     setIsAdmin(flag === "true");
   }, []);
@@ -150,7 +150,7 @@ const Home = () => {
       <div id="banner" className="banner">
         <div className="banner-content">
           <h1 className="banner-title">
-            Transform Your Space with DivineDekor
+            Transform Your Space with TandonDekor
           </h1>
           <p className="banner-subtitle">
             We create the vibe, you create the memories.
