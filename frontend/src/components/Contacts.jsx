@@ -109,7 +109,7 @@ const Contacts = () => {
                 <FaInstagram className="icon" />
                 <h4>Follow work</h4>
                 <p className="muted">Latest setups and inspirations</p>
-                <a className="link" href="https://www.instagram.com/tandon_shop_for_party?igsh=MXR2NDg2MmVzNDBhbQ==" target="_blank" rel="noreferrer">@Tandondecor</a>
+                <a className="link" href="https://www.instagram.com/tandon_shop_for_party?igsh=MXR2NDg2MmVzNDBhbQ==" target="_blank" rel="noreferrer">@Tandondekor</a>
               </div>
             </div>
 
