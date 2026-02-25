@@ -2,18 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://tandon-dekor-portfolio.vercel.app/</loc>
+    <loc>https://tandon-events-portfolio.vercel.app/</loc>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://tandon-dekor-portfolio.vercel.app/gallery</loc>
+    <loc>https://tandon-events-portfolio.vercel.app/gallery</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://tandon-dekor-portfolio.vercel.app/contact</loc>
+    <loc>https://tandon-events-portfolio.vercel.app/contact</loc>
     <priority>0.7</priority>
   </url>
+
 
 </urlset>
