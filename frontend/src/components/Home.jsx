@@ -533,7 +533,7 @@ const Home = () => {
       <div className="location">
         <h2 className="location-title fade-up">Find Us Here</h2>
         <div className="location-name">
-          <FaMapMarkerAlt /> Tandon Decorators, Sambhal, Uttar Pradesh
+          <FaMapMarkerAlt /> Tandon Events, Sambhal, Uttar Pradesh
         </div>{" "}
         <div className="location-map">
           <iframe
