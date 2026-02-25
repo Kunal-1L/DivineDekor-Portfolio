@@ -32,7 +32,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = "TandonDekor - Home";
+    document.title = "TandonEvents - Home";
     const flag = localStorage.getItem("isAdmin");
     setIsAdmin(flag === "true");
   }, []);
