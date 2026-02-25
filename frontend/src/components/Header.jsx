@@ -18,7 +18,7 @@ const Header = () => {
             className="logo-animation"
           />
           <div className="logo-name">
-            <h1 className="logo-title">TandonDekor</h1>
+            <h1 className="logo-title">TandonEvents</h1>
           </div>
         </div>
 
