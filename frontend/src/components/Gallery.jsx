@@ -33,7 +33,7 @@ const Gallery = () => {
   const observerFiltered = useRef();
 
   useEffect(() => {
-      document.title = "TandonDekor - Portfolio";
+      document.title = "TandonEvents - Portfolio";
     }, []);
 
   const handleLike = async (itemId) => {
