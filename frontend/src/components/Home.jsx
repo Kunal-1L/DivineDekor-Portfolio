@@ -150,7 +150,7 @@ const Home = () => {
       <div id="banner" className="banner">
         <div className="banner-content">
           <h1 className="banner-title">
-            Transform Your Space with TandonDekor
+            Transform Your Space with Tandon Events
           </h1>
           <p className="banner-subtitle">
             We create the vibe, you create the memories.
