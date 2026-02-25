@@ -23,9 +23,9 @@ const Footer = () => {
       <div className="footer-container">
         {/* About Section */}
         <div className="footer-about">
-          <h3>About TandonDekor</h3>
+          <h3>About Tandon Events</h3>
           <p>
-            At TandonDekor, we specialize in creating unforgettable event
+            At Tandon Events, we specialize in creating unforgettable event
             decorations tailored to your unique needs. Let us transform your
             special moments into cherished memories.
           </p>
@@ -80,7 +80,7 @@ const Footer = () => {
       {/* Copyright */}
       <div className="footer-copyright">
         <p>
-          &copy; {new Date().getFullYear()} TandonDekor. All rights reserved.
+          &copy; {new Date().getFullYear()} Tandon Events. All rights reserved.
         </p>
       </div>
     </div>
