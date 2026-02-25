@@ -48,7 +48,7 @@ const Contacts = () => {
     }
   };
   useEffect(() => {
-      document.title = "TandonDekor - Contact";
+      document.title = "TandonEvents - Contact";
     }, []);
 
   return (
